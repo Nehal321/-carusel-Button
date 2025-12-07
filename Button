@@ -1,0 +1,33 @@
+
+Step - 1 
+
+Add the Js -  Location Body End- Footer - Load jquery
+
+<script>
+jQuery(function ($) {
+
+    const timer = setInterval(() => {
+        const swiper = $('.my-carousel .swiper')[0]?.swiper;
+        if (!swiper) return;   // not ready yet
+
+        clearInterval(timer);
+
+        $('.custom-prev a').on('click', function (e) {
+            e.preventDefault();
+            swiper.slidePrev();
+        });
+
+        $('.custom-next a').on('click', function (e) {
+            e.preventDefault();
+            swiper.slideNext();
+        });
+
+    }, 200);
+
+});
+</script>
+
+Step - 2
+
+Add 2 button and assing the class anme into button instead of Id
+
